@@ -13,7 +13,14 @@ function App() {
           setSearchTerm(event.target.value);
         }}
       />
-      {MOCKDATAJSON.map((val, key) => {
+      {MOCKDATAJSON.filter((val) => {
+        if (searchTerm == "") {
+          return val;
+        } else if (
+          val.first_name.toLowerCase().includes(searchTerm.toLowerCase())
+        ) {
+        }
+      }).map((val, key) => {
         return (
           <div className="user" key={key}>
             <p>{val.first_name}</p>
