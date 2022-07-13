@@ -7,7 +7,7 @@ function App() {
       <input type="text" placeholder="search..." />
       {MOCKDATAJSON.map((val, key) => {
         return (
-          <div>
+          <div className="user" key={key}>
             <p>{val.first_name}</p>
           </div>
         );
