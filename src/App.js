@@ -19,6 +19,7 @@ function App() {
         } else if (
           val.first_name.toLowerCase().includes(searchTerm.toLowerCase())
         ) {
+          return val;
         }
       }).map((val, key) => {
         return (
