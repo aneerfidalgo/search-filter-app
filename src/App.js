@@ -1,12 +1,17 @@
 import "./App.css";
-import JSONDATA from ".MOCK_DATA.json";
+import MOCKDATAJSON from "./MOCK_DATA.json";
 
 function App() {
   return (
     <div className="App">
-      {" "}
       <input type="text" placeholder="search..." />
-      {JSONDATA.map((val, key) => {})}
+      {MOCKDATAJSON.map((val, key) => {
+        return (
+          <div>
+            <p>{val.first_name}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }
